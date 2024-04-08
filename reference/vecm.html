@@ -101,9 +101,18 @@ rather as data not (yet) available (the default).</p></dd>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Create vintage and test</span></span></span>
 <span class="r-in"><span><span class="va">vintages</span><span class="op">&lt;-</span><span class="fu"><a href="create_vintages.html">create_vintages</a></span><span class="op">(</span><span class="va">df</span>, periodicity <span class="op">=</span> <span class="fl">4</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in create_vintages.default(df, periodicity = 4):</span> The function requires a data.frame, a matrix or a mts object!</span>
 <span class="r-in"><span><span class="fu">vecm</span><span class="op">(</span><span class="va">vintages</span><span class="op">$</span><span class="va">diagonal_view</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in eval(expr, envir, enclos):</span> object 'vintages' not found</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                           trace(2) trace(1)   max(2)   max(1)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [Release[1]]_[Release[2]] 1.657778 24.16726 1.657778 22.50948</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [Release[1]]_[Release[3]] 1.671109 30.62985 1.671109 28.95874</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [Release[1]]_[Release[4]] 1.640661 23.37093 1.640661 21.73027</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [Release[1]]_[Release[5]] 1.760839 21.22042 1.760839 19.45958</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [Release[2]]_[Release[3]] 1.902635 24.26282 1.902635 22.36019</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [Release[2]]_[Release[4]] 1.852304 17.28764 1.852304 15.43534</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [Release[2]]_[Release[5]] 2.022543 17.67682 2.022543 15.65428</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [Release[3]]_[Release[4]] 2.039084 21.89822 2.039084 19.85913</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [Release[3]]_[Release[5]] 2.233745 22.39236 2.233745 20.15862</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [Release[4]]_[Release[5]] 2.106855 23.91079 2.106855 21.80393</span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
     </div>

@@ -46,9 +46,6 @@
     <loc>https://rjdemetra.github.io/rjd3revisions/reference/efficiencyModel2.html</loc>
   </url>
   <url>
-    <loc>https://rjdemetra.github.io/rjd3revisions/reference/get_report.html</loc>
-  </url>
-  <url>
     <loc>https://rjdemetra.github.io/rjd3revisions/reference/get_revisions.html</loc>
   </url>
   <url>
@@ -65,6 +62,9 @@
   </url>
   <url>
     <loc>https://rjdemetra.github.io/rjd3revisions/reference/print.rjd3rev_revision_analysis.html</loc>
+  </url>
+  <url>
+    <loc>https://rjdemetra.github.io/rjd3revisions/reference/render_report.html</loc>
   </url>
   <url>
     <loc>https://rjdemetra.github.io/rjd3revisions/reference/revision_analysis.html</loc>
