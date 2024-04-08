@@ -50,10 +50,10 @@
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">create_vintages_from_xlsx</span><span class="op">(</span></span>
 <span>  <span class="va">file</span>,</span>
-<span>  <span class="va">sheetname</span>,</span>
-<span>  <span class="va">periodicity</span>,</span>
-<span>  vintage.selection <span class="op">=</span> <span class="cn">NULL</span>,</span>
-<span>  revdate.format <span class="op">=</span> <span class="st">"%Y.%m.%d"</span></span>
+<span>  type <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"long"</span>, <span class="st">"horizontal"</span>, <span class="st">"vertical"</span><span class="op">)</span>,</span>
+<span>  periodicity <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">4L</span>, <span class="fl">12L</span>, <span class="fl">1L</span><span class="op">)</span>,</span>
+<span>  date_format <span class="op">=</span> <span class="st">"%Y-%m-%d"</span>,</span>
+<span>  <span class="va">...</span></span>
 <span><span class="op">)</span></span></code></pre></div>
     </div>
 
@@ -64,8 +64,9 @@
 to be read from.</p></dd>
 
 
-<dt>sheetname</dt>
-<dd><p>character containing the sheet to read</p></dd>
+<dt>type</dt>
+<dd><p>character specifying the type of representation of the input
+between `"long"`, `"horizontal"` and `"vertical"` approach.</p></dd>
 
 
 <dt>periodicity</dt>
@@ -73,18 +74,17 @@ to be read from.</p></dd>
 monthly,quarterly or annual data)</p></dd>
 
 
-<dt>vintage.selection</dt>
-<dd><p>a list specifying the range of revision dates to
-retain. As an example: list(start='2022-02-02',
-end='2022-08-05') would keep all the vintages whose
-revision date is between 02Feb.2022 and 05Aug.2022.
-If NULL (the default), the whole range is selected.</p></dd>
-
-
-<dt>revdate.format</dt>
+<dt>date_format</dt>
 <dd><p>character string corresponding to the format used in
-the input data.frame for the revision dates.
-The default is %Y-%m-%d.</p></dd>
+the input data.frame for the revision dates.</p></dd>
+
+
+<dt>...</dt>
+<dd><p>Arguments to be passed to `readxl::read_excel()`, for example:
+* `sheet` character containing the sheet to read
+* `range` A cell range to read from
+* `col_names` a boolean to use the first row as column names
+* `...`</p></dd>
 
 </dl></div>
     <div class="section level2">
@@ -100,7 +100,18 @@ The default is %Y-%m-%d.</p></dd>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span></span>
+<span class="r-in"><span><span class="va">file_name</span> <span class="op">&lt;-</span> <span class="st">"myinput.xlsx"</span></span></span>
+<span class="r-in"><span><span class="va">sheet_name</span> <span class="op">&lt;-</span> <span class="st">"Sheet1"</span></span></span>
+<span class="r-in"><span><span class="va">vintages</span> <span class="op">&lt;-</span> <span class="fu">create_vintages_from_xlsx</span><span class="op">(</span></span></span>
+<span class="r-in"><span>    file <span class="op">=</span> <span class="va">file_name</span>,</span></span>
+<span class="r-in"><span>    type <span class="op">=</span> <span class="st">"horizontal"</span>,</span></span>
+<span class="r-in"><span>    periodicity <span class="op">=</span> <span class="fl">12L</span>,</span></span>
+<span class="r-in"><span>    sheet <span class="op">=</span> <span class="va">sheet_name</span></span></span>
+<span class="r-in"><span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="op">}</span></span></span>
+<span class="r-in"><span></span></span>
+</code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
     </nav></aside></div>
