@@ -48,36 +48,7 @@
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">create_vintages</span><span class="op">(</span><span class="va">x</span>, <span class="va">...</span><span class="op">)</span></span>
-<span></span>
-<span><span class="fu">create_vintages.data.frame</span><span class="op">(</span></span>
-<span>  <span class="va">x</span>,</span>
-<span>  type <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"long"</span>, <span class="st">"horizontal"</span>, <span class="st">"vertical"</span><span class="op">)</span>,</span>
-<span>  periodicity <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">4L</span>, <span class="fl">12L</span>, <span class="fl">1L</span><span class="op">)</span>,</span>
-<span>  date_format <span class="op">=</span> <span class="st">"%Y-%m-%d"</span>,</span>
-<span>  <span class="va">...</span></span>
-<span><span class="op">)</span></span>
-<span></span>
-<span><span class="co"># S3 method for mts</span></span>
-<span><span class="fu">create_vintages</span><span class="op">(</span></span>
-<span>  <span class="va">x</span>,</span>
-<span>  type <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"long"</span>, <span class="st">"horizontal"</span>, <span class="st">"vertical"</span><span class="op">)</span>,</span>
-<span>  periodicity <span class="op">=</span> <span class="cn">NULL</span>,</span>
-<span>  date_format <span class="op">=</span> <span class="st">"%Y-%m-%d"</span>,</span>
-<span>  <span class="va">...</span></span>
-<span><span class="op">)</span></span>
-<span></span>
-<span><span class="co"># S3 method for matrix</span></span>
-<span><span class="fu">create_vintages</span><span class="op">(</span></span>
-<span>  <span class="va">x</span>,</span>
-<span>  type <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"long"</span>, <span class="st">"horizontal"</span>, <span class="st">"vertical"</span><span class="op">)</span>,</span>
-<span>  periodicity <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">4L</span>, <span class="fl">12L</span>, <span class="fl">1L</span><span class="op">)</span>,</span>
-<span>  date_format <span class="op">=</span> <span class="st">"%Y-%m-%d"</span>,</span>
-<span>  <span class="va">...</span></span>
-<span><span class="op">)</span></span>
-<span></span>
-<span><span class="co"># S3 method for default</span></span>
-<span><span class="fu">create_vintages</span><span class="op">(</span><span class="va">x</span>, <span class="va">...</span><span class="op">)</span></span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">create_vintages</span><span class="op">(</span><span class="va">x</span>, <span class="va">...</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -95,12 +66,22 @@ between `"long"`, `"horizontal"` and `"vertical"` approach.</p></dd>
 
 <dt>periodicity</dt>
 <dd><p>periodicity of the time period (12, 4 or 1 for resp.
-monthly,quarterly or annual data)</p></dd>
+monthly, quarterly or annual data)</p></dd>
 
 
 <dt>date_format</dt>
-<dd><p>character string corresponding to the format used in
+<dd><p><code>character</code> string corresponding to the format used in
 the input data.frame for the revision dates.</p></dd>
+
+
+<dt>vintage_selection</dt>
+<dd><p><code>Date</code> vector (or a character vector with the
+same format as date_format) of length &lt;= 2, specifying the range of revision
+dates to retain. As an example:
+c(start = "2022-02-02", end = "2022-08-05") or
+c(start = as.Date("2022-02-02"), end = as.Date("2022-08-05")) would keep all
+the vintages whose revision date is between 02 Feb. 2022 and 05 Aug. 2022.
+If missing (by default), the whole range is selected.</p></dd>
 
 </dl></div>
     <div class="section level2">
@@ -150,15 +131,21 @@ non-redundant storage of data.</p>
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## creating the input</span></span></span>
-<span class="r-in"><span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>rev_date <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="st">"2022-07-31"</span>,<span class="fl">4</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="st">"2022-08-31"</span>,<span class="fl">4</span><span class="op">)</span>,</span></span>
-<span class="r-in"><span>                              <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="st">"2022-09-30"</span>,<span class="fl">4</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="st">"2022-10-31"</span>,<span class="fl">4</span><span class="op">)</span>,</span></span>
-<span class="r-in"><span>                              <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="st">"2022-11-30"</span>,<span class="fl">4</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="st">"2022-12-31"</span>,<span class="fl">4</span><span class="op">)</span>,</span></span>
-<span class="r-in"><span>                              <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="st">"2023-01-31"</span>,<span class="fl">4</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="st">"2023-02-28"</span>,<span class="fl">4</span><span class="op">)</span><span class="op">)</span>,</span></span>
-<span class="r-in"><span>                 time_period <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"2022Q1"</span>,<span class="st">"2022Q2"</span>,<span class="st">"2022Q3"</span>,<span class="st">"2022Q4"</span><span class="op">)</span>,<span class="fl">8</span><span class="op">)</span><span class="op">)</span>,</span></span>
-<span class="r-in"><span>                 obs_value <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">.8</span>,<span class="fl">.2</span>,<span class="cn">NA</span>,<span class="cn">NA</span>, <span class="fl">.8</span>,<span class="fl">.1</span>,<span class="cn">NA</span>,<span class="cn">NA</span>,</span></span>
-<span class="r-in"><span>                               <span class="fl">.7</span>,<span class="fl">.1</span>,<span class="cn">NA</span>,<span class="cn">NA</span>, <span class="fl">.7</span>,<span class="fl">.2</span>,<span class="fl">.5</span>,<span class="cn">NA</span>,</span></span>
-<span class="r-in"><span>                               <span class="fl">.7</span>,<span class="fl">.2</span>,<span class="fl">.5</span>,<span class="cn">NA</span>, <span class="fl">.7</span>,<span class="fl">.3</span>,<span class="fl">.7</span>,<span class="cn">NA</span>,</span></span>
-<span class="r-in"><span>                               <span class="fl">.7</span>,<span class="fl">.2</span>,<span class="fl">.7</span>,<span class="fl">.4</span>, <span class="fl">.7</span>,<span class="fl">.3</span>,<span class="fl">.7</span>,<span class="fl">.3</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span></span></span>
+<span class="r-in"><span>    rev_date <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span></span></span>
+<span class="r-in"><span>        <span class="st">"2022-07-31"</span>, <span class="st">"2022-08-31"</span>, <span class="st">"2022-09-30"</span>, <span class="st">"2022-10-31"</span>,</span></span>
+<span class="r-in"><span>        <span class="st">"2022-11-30"</span>, <span class="st">"2022-12-31"</span>, <span class="st">"2023-01-31"</span>, <span class="st">"2023-02-28"</span></span></span>
+<span class="r-in"><span>    <span class="op">)</span>, each <span class="op">=</span> <span class="fl">4L</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>    time_period <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"2022Q1"</span>, <span class="st">"2022Q2"</span>, <span class="st">"2022Q3"</span>, <span class="st">"2022Q4"</span><span class="op">)</span>, times <span class="op">=</span> <span class="fl">8L</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>    obs_value <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span></span></span>
+<span class="r-in"><span>        <span class="fl">.8</span>, <span class="fl">.2</span>, <span class="cn">NA</span>, <span class="cn">NA</span>, <span class="fl">.8</span>, <span class="fl">.1</span>, <span class="cn">NA</span>, <span class="cn">NA</span>,</span></span>
+<span class="r-in"><span>        <span class="fl">.7</span>, <span class="fl">.1</span>, <span class="cn">NA</span>, <span class="cn">NA</span>, <span class="fl">.7</span>, <span class="fl">.2</span>, <span class="fl">.5</span>, <span class="cn">NA</span>,</span></span>
+<span class="r-in"><span>        <span class="fl">.7</span>, <span class="fl">.2</span>, <span class="fl">.5</span>, <span class="cn">NA</span>, <span class="fl">.7</span>, <span class="fl">.3</span>, <span class="fl">.7</span>, <span class="cn">NA</span>,</span></span>
+<span class="r-in"><span>        <span class="fl">.7</span>, <span class="fl">.2</span>, <span class="fl">.7</span>, <span class="fl">.4</span>, <span class="fl">.7</span>, <span class="fl">.3</span>, <span class="fl">.7</span>, <span class="fl">.3</span></span></span>
+<span class="r-in"><span>    <span class="op">)</span></span></span>
+<span class="r-in"><span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="va">vintages</span> <span class="op">&lt;-</span> <span class="fu">create_vintages</span><span class="op">(</span>x <span class="op">=</span> <span class="va">df</span>, type <span class="op">=</span> <span class="st">"long"</span>, periodicity <span class="op">=</span> <span class="fl">4L</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## specifying the format of revision dates</span></span></span>
@@ -169,6 +156,15 @@ non-redundant storage of data.</p>
 <span class="r-in"><span>    date_format<span class="op">=</span> <span class="st">"%Y-%m-%d"</span></span></span>
 <span class="r-in"><span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co">## including vintage selection</span></span></span>
+<span class="r-in"><span><span class="va">vintages</span> <span class="op">&lt;-</span> <span class="fu">create_vintages</span><span class="op">(</span></span></span>
+<span class="r-in"><span>    x <span class="op">=</span> <span class="va">df</span>,</span></span>
+<span class="r-in"><span>    type <span class="op">=</span><span class="st">"long"</span>,</span></span>
+<span class="r-in"><span>    periodicity <span class="op">=</span> <span class="fl">4L</span>,</span></span>
+<span class="r-in"><span>    date_format<span class="op">=</span> <span class="st">"%Y-%m-%d"</span>,</span></span>
+<span class="r-in"><span>    vintage_selection <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span>start<span class="op">=</span><span class="st">"2022-10-31"</span>, end<span class="op">=</span><span class="st">"2023-01-31"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
@@ -176,7 +172,7 @@ non-redundant storage of data.</p>
 
 
     <footer><div class="pkgdown-footer-left">
-  <p></p><p>Developed by Corentin Lemasson.</p>
+  <p></p><p>Developed by Corentin Lemasson, Tanguy Barthelemy.</p>
 </div>
 
 <div class="pkgdown-footer-right">
