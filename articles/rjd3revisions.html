@@ -124,8 +124,8 @@ version of R, you might also need to install another version of Rtools.
 <p>This package also depends on the package <a href="https://github.com/rjdemetra/rjd3toolkit" class="external-link">rjd3toolkit</a> that you
 must install from GitHub prior to <a href="https://github.com/rjdemetra/rjd3revisions" class="external-link">rjd3revsions</a>.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"rjdemetra/rjd3toolkit"</span><span class="op">)</span></span>
-<span><span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"rjdemetra/rjd3revisions"</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"rjdemetra/rjd3toolkit"</span><span class="op">)</span></span>
+<span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"rjdemetra/rjd3revisions"</span><span class="op">)</span></span></code></pre></div>
 <p>Note that depending on the R packages that are already installed on
 your computer, you might also be asked to install or re-install a few
 other packages from CRAN.</p>
@@ -220,7 +220,7 @@ analysis</p>
 <p>Finally to create the report and get a summary of the results, you
 can use</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">get_report</span><span class="op">(</span><span class="va">rslt</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/render_report.html">render_report</a></span><span class="op">(</span><span class="va">rslt</span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="va">rslt</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">rslt</span><span class="op">)</span></span>
@@ -440,7 +440,7 @@ number of releases under investigation when diagonal view is selected
 and/or change the default setting about the prior transformation of the
 data (including the possibility to add a prior log-transformation of
 your data).</p>
-<p>The function <code>get_report()</code> applied on the output of
+<p>The function <code><a href="../reference/render_report.html">render_report()</a></code> applied on the output of
 <code><a href="../reference/revision_analysis.html">revision_analysis()</a></code> will generate an enhanced HTML report
 including both a formatted summary of the results and full explanations
 about each tests (which are also included in the vignette below). The
@@ -469,7 +469,7 @@ the function <code><a href="../reference/revision_analysis.html">revision_analys
 functions associated with the individual test will give you the same
 result specific to this test.</p>
 <p>In addition to the visual report that you can get by applying the
-function <code>get_report()</code> on the output of the function
+function <code><a href="../reference/render_report.html">render_report()</a></code> on the output of the function
 <code><a href="../reference/revision_analysis.html">revision_analysis()</a></code>, you can also apply the usual
 <code><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary()</a></code>, <code><a href="https://rdrr.io/r/base/print.html" class="external-link">print()</a></code> and <code><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot()</a></code>
 functions to this output. The function <code><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary()</a></code>, in
