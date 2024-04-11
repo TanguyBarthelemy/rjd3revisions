@@ -85,31 +85,31 @@ the input data.frame for the revision dates.</p></dd>
 <span class="r-in"><span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="va">vertical_format</span> <span class="op">&lt;-</span> <span class="fu">rjd3revisions</span><span class="fu">:::</span><span class="fu">from_long_to_vertical</span><span class="op">(</span><span class="va">long_format</span>, periodicity <span class="op">=</span> <span class="fl">12L</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu">check_vertical</span><span class="op">(</span><span class="va">vertical_format</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>          2020-04-12 2020-06-16 2020-08-20   2021-04-02  2021-08-01 2021-12-08</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Jan 2020   4.417751  5.9214771  5.8460291   5.63373747   5.5213485   5.753374</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Feb 2020   4.067117  4.4523999  5.7385702   5.61723943   5.8403646   5.695314</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Mar 2020   6.135137  4.1899531  4.0007379   3.84394275   4.0496461   3.871991</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Apr 2020  -1.746492 -0.2127693 -0.3216303   0.07744739  -0.5094473  -0.372039</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> May 2020         NA  2.0666149  3.8207089   2.56958900   2.4484544   2.321924</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Jun 2020         NA  2.9740879  4.1941011   5.08217071   4.5447389   4.957074</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Jul 2020         NA         NA  0.1604154   1.56031115   2.1727904   2.768003</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Aug 2020         NA         NA  4.5614416   0.81072159   2.1703025   2.391524</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Sep 2020         NA         NA         NA  -3.26100444  -0.3482974  -0.188866</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Oct 2020         NA         NA         NA  -1.47208898  -2.8822189  -4.204329</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Nov 2020         NA         NA         NA  -6.16095539  -4.6295693  -4.937964</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Dec 2020         NA         NA         NA  -6.78266467  -3.6395191  -4.647114</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Jan 2021         NA         NA         NA  -6.75616488  -7.4663643  -8.642544</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Feb 2021         NA         NA         NA  -9.44950842  -6.6228233  -8.701516</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Mar 2021         NA         NA         NA -11.84379876 -11.1365061 -12.343233</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Apr 2021         NA         NA         NA -17.26426892 -18.8000209 -16.556933</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> May 2021         NA         NA         NA           NA -17.2861849 -16.921115</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Jun 2021         NA         NA         NA           NA -12.4932782  -9.599098</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Jul 2021         NA         NA         NA           NA -14.2618685 -10.920897</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Aug 2021         NA         NA         NA           NA  -9.2713750  -7.833767</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Sep 2021         NA         NA         NA           NA          NA  -9.961698</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Oct 2021         NA         NA         NA           NA          NA -15.646531</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Nov 2021         NA         NA         NA           NA          NA -14.124103</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Dec 2021         NA         NA         NA           NA          NA -19.234204</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>          2020-04-12 2020-06-16 2020-08-20 2021-04-02 2021-08-01  2021-12-08</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Jan 2020   9.250580  10.754306  10.678858  10.466566 10.3541771 10.58620264</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Feb 2020  11.125572  11.510854  12.797024  12.675694 12.8988189 12.75376839</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Mar 2020   9.230273   7.285089   7.095874   6.939079  7.1447823  6.96712695</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Apr 2020   5.760604   7.294326   7.185465   7.584543  6.9976479  7.13505629</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> May 2020         NA   8.198790   9.952884   8.701764  8.5806296  8.45409911</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Jun 2020         NA   1.320353   2.540366   3.428436  2.8910042  3.30333897</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Jul 2020         NA         NA  -2.731360  -1.331465 -0.7189855 -0.12377278</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Aug 2020         NA         NA   6.220397   2.469677  3.8292577  4.05047906</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Sep 2020         NA         NA         NA   3.789253  6.7019600  6.86139139</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Oct 2020         NA         NA         NA  10.901764  9.4916336  8.16952333</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Nov 2020         NA         NA         NA   4.781739  6.3131254  6.00473039</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Dec 2020         NA         NA         NA   4.124733  7.2678789  6.26028417</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Jan 2021         NA         NA         NA  12.309870 11.5996709 10.42349148</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Feb 2021         NA         NA         NA  17.934626 20.7613107 18.68261813</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Mar 2021         NA         NA         NA  16.462871 17.1701640 15.96343661</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Apr 2021         NA         NA         NA  15.356698 13.8209457 16.06403364</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> May 2021         NA         NA         NA         NA 13.7864024 14.15147247</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Jun 2021         NA         NA         NA         NA  6.9644324  9.85861301</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Jul 2021         NA         NA         NA         NA  2.1727035  5.51367519</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Aug 2021         NA         NA         NA         NA  3.8779502  5.31555858</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Sep 2021         NA         NA         NA         NA         NA  3.38545894</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Oct 2021         NA         NA         NA         NA         NA  3.15915451</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Nov 2021         NA         NA         NA         NA         NA  0.02616883</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Dec 2021         NA         NA         NA         NA         NA -2.25799154</span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
