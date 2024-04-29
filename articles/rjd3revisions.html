@@ -362,8 +362,12 @@ can use</p>
 <span><span class="co">#&gt; Warning: efficiencyModel2 could not be performed</span></span>
 <span><span class="co">#&gt; Warning: orthogonallyModel1 could not be performed</span></span>
 <span><span class="co">#&gt; Warning: orthogonallyModel2 could not be performed</span></span>
-<span></span>
-<span><span class="co"># render_report(rslt, output_path = "C:/User/report.pdf", output_format = "pdf_format")</span></span>
+<span><span class="co"># render_report(</span></span>
+<span><span class="co">#     rslt,</span></span>
+<span><span class="co">#     output_file = "my_report",</span></span>
+<span><span class="co">#     output_dir = "C:/Users/xxx",</span></span>
+<span><span class="co">#     output_format = "pdf_document"</span></span>
+<span><span class="co"># )</span></span>
 <span></span>
 <span><span class="co"># summary(rslt)</span></span>
 <span><span class="co"># print(rslt)</span></span></code></pre></div>
@@ -667,12 +671,14 @@ particular, a set of near zero preliminary estimates would always give a
 value of the U1 statistic close to 1 even though they are close to the
 latter estimates.</p>
 <p>The second statistic, U2, is given by <span class="math display">\[
-U_2=\frac{\sqrt{\sum^n_{t=1}\left(\frac{P_{t+1}-L_{t+1}}{L_t}\right)^2}}{\sqrt{\sum^n_{t=1}\left(\frac{L_{t+1}-L_t}{L_t}\right)^2}}
+U_2=\frac{\sqrt{\sum^n_{t=1}\left(\frac{P_{t + 1}-L_{t +
+1}}{L_t}\right)^2}}{\sqrt{\sum^n_{t=1}\left(\frac{L_{t +
+1}-L_t}{L_t}\right)^2}}
 \]</span> The interpretation of U2 differs from U1. The value of 1 is no
 longer the upper bound of the statistic but a threshold above (below)
 which the preliminary estimates is less (more) accurate than the naïve
 random walk forecast repeating the last observed value (considering
-<span class="math inline">\(P_{t+1}=L_t\)</span>). Whenever it can be
+<span class="math inline">\(P_{t + 1}=L_t\)</span>). Whenever it can be
 calculated (<span class="math inline">\(L_t \neq 0 ~\forall t\)</span>),
 the U2 statistic is the preferred option to evaluate the relevancy of
 the preliminary estimates.</p>
@@ -714,7 +720,8 @@ accordingly.</p>
 <p>Hence, the Augmented t-test is calculated as <span class="math display">\[
 t_{adj}=\frac{\overline{R}}{\sqrt{\frac{s^2(1+\hat{\gamma})}{n(1-\hat{\gamma})}}}
 \]</span> where <span class="math display">\[
-\hat{\gamma}=\frac{\sum^{n-1}_{t=1}(R_t-\overline{R})(R_{t+1}-\overline{R})}{\sum^n_{t=1}(R_t-\overline{R})^2}
+\hat{\gamma}=\frac{\sum^{n-1}_{t=1}(R_t-\overline{R})(R_{t +
+1}-\overline{R})}{\sum^n_{t=1}(R_t-\overline{R})^2}
 \]</span></p>
 </div>
 <div class="section level4">
