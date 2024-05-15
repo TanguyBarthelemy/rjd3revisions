@@ -44,7 +44,7 @@
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
       <img src="" class="logo" alt=""><h1>Check horizontal format</h1>
-      <small class="dont-index">Source: <a href="https://github.com/rjdverse/rjd3revisions/blob/HEAD/R/vintages.R" class="external-link"><code>R/vintages.R</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/rjdverse/rjd3revisions/blob/HEAD/R/check.R" class="external-link"><code>R/check.R</code></a></small>
       <div class="d-none name"><code>check_horizontal.Rd</code></div>
     </div>
 
@@ -99,34 +99,34 @@ the input data.frame for the revision dates.</p></dd>
 <span class="r-in"><span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="va">horizontal_format</span> <span class="op">&lt;-</span> <span class="fu">rjd3revisions</span><span class="fu">:::</span><span class="fu">from_long_to_horizontal</span><span class="op">(</span><span class="va">long_format</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu">check_horizontal</span><span class="op">(</span><span class="va">horizontal_format</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>            2020-01-01 2020-02-01 2020-03-01 2020-04-01 2020-05-01 2020-06-01</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2020-01-14   15.50875         NA         NA         NA         NA         NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2020-03-19   17.44845   14.70426   13.68226         NA         NA         NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2020-06-17   17.73028   17.39346   16.97353   17.42611   12.77721   10.19664</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2020-11-07   16.78022   16.05125   17.28954   17.15187   17.68709   11.33533</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2020-11-27   16.64452   16.00649   17.17120   19.67049   17.44317   11.30964</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2021-11-19   16.80679   16.41421   17.07703   18.24470   16.94045   10.21264</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>            2020-01-01 2020-02-01 2020-03-01 2020-04-01  2020-05-01 2020-06-01</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2020-01-14   6.726302         NA         NA         NA          NA         NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2020-03-19   8.665997   1.531803 -2.6617227         NA          NA         NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2020-06-17   8.947823   4.220996  0.6295488 -2.8708840 -4.76488922 -2.0349080</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2020-11-07   7.997768   2.878791  0.9455563 -3.1451175  0.14499617 -0.8962238</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2020-11-27   7.862071   2.834027  0.8272193 -0.6264999 -0.09893015 -0.9219075</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2021-11-19   8.024340   3.241752  0.7330477 -2.0522891 -0.60164940 -2.0189058</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>            2020-07-01 2020-08-01 2020-09-01 2020-10-01 2020-11-01 2020-12-01</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2020-01-14         NA         NA         NA         NA         NA         NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2020-03-19         NA         NA         NA         NA         NA         NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2020-06-17         NA         NA         NA         NA         NA         NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2020-11-07   14.07048   19.10833   24.44828   29.19410   25.51658         NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2020-11-27   11.65749   17.51781   25.80678   31.98573   26.15492         NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2021-11-19   11.29181   17.21702   25.17847   30.30936   25.82082   23.93976</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2020-11-07  2.2225416  1.3443700 -0.3374980 -2.6611124  -2.302070         NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2020-11-27 -0.1904408 -0.2461446  1.0209948  0.1305198  -1.663730         NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2021-11-19 -0.5561243 -0.5469420  0.3926851 -1.5458499  -1.997834  -8.108785</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>            2021-01-01 2021-02-01 2021-03-01 2021-04-01 2021-05-01 2021-06-01</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2020-01-14         NA         NA         NA         NA         NA         NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2020-03-19         NA         NA         NA         NA         NA         NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2020-06-17         NA         NA         NA         NA         NA         NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2020-11-07         NA         NA         NA         NA         NA         NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2020-11-27         NA         NA         NA         NA         NA         NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2021-11-19   31.05395   35.90363   26.90416   24.84611   25.78662   20.34201</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2021-11-19  -10.44925  -9.971984  -13.95333  -14.53052  -8.546191  -15.90454</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>            2021-07-01 2021-08-01 2021-09-01 2021-10-01 2021-11-01 2021-12-01</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2020-01-14         NA         NA         NA         NA         NA         NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2020-03-19         NA         NA         NA         NA         NA         NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2020-06-17         NA         NA         NA         NA         NA         NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2020-11-07         NA         NA         NA         NA         NA         NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2020-11-27         NA         NA         NA         NA         NA         NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2021-11-19   18.20241   20.45337   29.04512   33.80765   24.82226         NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2021-11-19  -17.10054  -19.38163  -15.94107  -21.98129  -25.61938         NA</span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
     </div>

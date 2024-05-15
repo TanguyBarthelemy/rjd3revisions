@@ -121,7 +121,7 @@ section.</p>
 the package <a href="https://github.com/rjdverse/rjd3toolkit" class="external-link">rjd3toolkit</a> of <a href="https://github.com/rjdverse" class="external-link">rjdverse</a>. Prior the installation,
 you must ensure to have a Java version &gt;= 17.0 on your computer. If
 you need to use a portable version of Java to fill this request, you can
-follow the instructions in the <a href="https://github.com/jdemetra/rjdemetra/wiki/Installation-manual" class="external-link">installation
+follow the instructions in the <a href="https://github.com/rjdverse/rjdemetra/wiki/Installation-manual" class="external-link">installation
 manual</a> of RJDemetra.</p>
 <p>In addition to a Java version &gt;= 17.0, you must have a recent
 version of the R packages rJava (&gt;= 1.0.6) and RProtobuf
@@ -131,8 +131,8 @@ version of R, you might also need to install another version of Rtools.
 <p>This package also depends on the package <a href="https://github.com/rjdverse/rjd3toolkit" class="external-link">rjd3toolkit</a> that you
 must install from GitHub prior to <a href="https://github.com/rjdverse/rjd3revisions" class="external-link">rjd3revsions</a>.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"rjdverse/rjd3toolkit@*release"</span><span class="op">)</span></span>
-<span><span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"rjdverse/rjd3revisions@*release"</span>, build_vignettes <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"rjdverse/rjd3toolkit@*release"</span><span class="op">)</span></span>
+<span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"rjdverse/rjd3revisions@*release"</span>, build_vignettes <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
 <p>Note that depending on the R packages that are already installed on
 your computer, you might also be asked to install or re-install a few
 other packages from CRAN.</p>
@@ -413,46 +413,46 @@ vintages:</p>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; $long_view</span></span>
 <span><span class="co">#&gt;      revdate       time obs_values</span></span>
-<span><span class="co">#&gt; 1 2024-09-05 2022-07-01  13.370677</span></span>
-<span><span class="co">#&gt; 2 2024-09-05 2022-10-01   5.983117</span></span>
-<span><span class="co">#&gt; 3 2024-09-05 2023-01-01  14.193190</span></span>
-<span><span class="co">#&gt; 4 2024-09-05 2023-04-01  18.940821</span></span>
-<span><span class="co">#&gt; 5 2024-09-05 2023-07-01  18.864698</span></span>
-<span><span class="co">#&gt; 6 2024-09-05 2023-10-01  14.292984</span></span>
-<span><span class="co">#&gt; 7 2024-09-05 2024-01-01  20.069911</span></span>
-<span><span class="co">#&gt; 8 2024-09-05 2024-04-01  20.538969</span></span>
+<span><span class="co">#&gt; 1 2024-09-05 2022-07-01   59.39902</span></span>
+<span><span class="co">#&gt; 2 2024-09-05 2022-10-01   64.64896</span></span>
+<span><span class="co">#&gt; 3 2024-09-05 2023-01-01   74.13336</span></span>
+<span><span class="co">#&gt; 4 2024-09-05 2023-04-01   63.17524</span></span>
+<span><span class="co">#&gt; 5 2024-09-05 2023-07-01   46.41281</span></span>
+<span><span class="co">#&gt; 6 2024-09-05 2023-10-01   54.34893</span></span>
+<span><span class="co">#&gt; 7 2024-09-05 2024-01-01   62.53816</span></span>
+<span><span class="co">#&gt; 8 2024-09-05 2024-04-01   54.13960</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; $vertical_view</span></span>
 <span><span class="co">#&gt;         2020-12-16 2024-08-17 2024-09-05</span></span>
-<span><span class="co">#&gt; 2022 Q3         NA   11.62773  13.370677</span></span>
-<span><span class="co">#&gt; 2022 Q4         NA   10.51440   5.983117</span></span>
-<span><span class="co">#&gt; 2023 Q1         NA   10.92766  14.193190</span></span>
-<span><span class="co">#&gt; 2023 Q2         NA   18.96012  18.940821</span></span>
-<span><span class="co">#&gt; 2023 Q3         NA   19.93631  18.864698</span></span>
-<span><span class="co">#&gt; 2023 Q4         NA   12.24794  14.292984</span></span>
-<span><span class="co">#&gt; 2024 Q1         NA   15.20009  20.069911</span></span>
-<span><span class="co">#&gt; 2024 Q2         NA   22.21436  20.538969</span></span>
+<span><span class="co">#&gt; 2022 Q3         NA   57.65607   59.39902</span></span>
+<span><span class="co">#&gt; 2022 Q4         NA   69.18024   64.64896</span></span>
+<span><span class="co">#&gt; 2023 Q1         NA   70.86783   74.13336</span></span>
+<span><span class="co">#&gt; 2023 Q2         NA   63.19453   63.17524</span></span>
+<span><span class="co">#&gt; 2023 Q3         NA   47.48442   46.41281</span></span>
+<span><span class="co">#&gt; 2023 Q4         NA   52.30389   54.34893</span></span>
+<span><span class="co">#&gt; 2024 Q1         NA   57.66834   62.53816</span></span>
+<span><span class="co">#&gt; 2024 Q2         NA   55.81499   54.13960</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; $horizontal_view</span></span>
 <span><span class="co">#&gt;            2022-07-01 2022-10-01 2023-01-01 2023-04-01 2023-07-01 2023-10-01</span></span>
 <span><span class="co">#&gt; 2020-12-16         NA         NA         NA         NA         NA         NA</span></span>
-<span><span class="co">#&gt; 2024-08-17   11.62773  10.514397   10.92766   18.96012   19.93631   12.24794</span></span>
-<span><span class="co">#&gt; 2024-09-05   13.37068   5.983117   14.19319   18.94082   18.86470   14.29298</span></span>
+<span><span class="co">#&gt; 2024-08-17   57.65607   69.18024   70.86783   63.19453   47.48442   52.30389</span></span>
+<span><span class="co">#&gt; 2024-09-05   59.39902   64.64896   74.13336   63.17524   46.41281   54.34893</span></span>
 <span><span class="co">#&gt;            2024-01-01 2024-04-01</span></span>
 <span><span class="co">#&gt; 2020-12-16         NA         NA</span></span>
-<span><span class="co">#&gt; 2024-08-17   15.20009   22.21436</span></span>
-<span><span class="co">#&gt; 2024-09-05   20.06991   20.53897</span></span>
+<span><span class="co">#&gt; 2024-08-17   57.66834   55.81499</span></span>
+<span><span class="co">#&gt; 2024-09-05   62.53816   54.13960</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; $diagonal_view</span></span>
 <span><span class="co">#&gt;         Release[1] Release[2] Release[3]</span></span>
-<span><span class="co">#&gt; 2022 Q3   7.385007   12.40392   10.66608</span></span>
-<span><span class="co">#&gt; 2022 Q4  17.372433   13.32732   14.10857</span></span>
-<span><span class="co">#&gt; 2023 Q1  14.767705   13.26704   13.34038</span></span>
-<span><span class="co">#&gt; 2023 Q2  17.588383   16.99401   17.41439</span></span>
-<span><span class="co">#&gt; 2023 Q3  20.310165   18.28672   18.81000</span></span>
-<span><span class="co">#&gt; 2023 Q4  28.131092   26.96325   26.70508</span></span>
-<span><span class="co">#&gt; 2024 Q1  24.917087   27.63936   27.66755</span></span>
-<span><span class="co">#&gt; 2024 Q2  25.061911   25.25874   26.62105</span></span>
+<span><span class="co">#&gt; 2022 Q3   11.07114   16.09005   14.35221</span></span>
+<span><span class="co">#&gt; 2022 Q4   22.26749   18.22237   19.00363</span></span>
+<span><span class="co">#&gt; 2023 Q1   22.24638   20.74572   20.81905</span></span>
+<span><span class="co">#&gt; 2023 Q2   27.77002   27.17565   27.59602</span></span>
+<span><span class="co">#&gt; 2023 Q3   32.40604   30.38260   30.90588</span></span>
+<span><span class="co">#&gt; 2023 Q4   36.14742   34.97957   34.72141</span></span>
+<span><span class="co">#&gt; 2024 Q1   34.80306   37.52533   37.55353</span></span>
+<span><span class="co">#&gt; 2024 Q2   43.30737   43.50420   44.86651</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="va">vintages</span><span class="op">)</span> <span class="co"># metadata about vintages</span></span>
 <span><span class="co">#&gt; Number of releases:  10</span></span>
 <span><span class="co">#&gt; Covered period:</span></span>
@@ -497,13 +497,13 @@ can use the function <code class="sourceCode r">revision_analysis</code></p>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; $parametric_analysis</span></span>
 <span><span class="co">#&gt;                                            Transf. [Release[2]]-[Release[1]]</span></span>
-<span><span class="co">#&gt; Relevancy - Theil U2                          None              Good (0.242)</span></span>
+<span><span class="co">#&gt; Relevancy - Theil U2                          None              Good (0.449)</span></span>
 <span><span class="co">#&gt; Bias1 T-test                                  None              Good (0.853)</span></span>
 <span><span class="co">#&gt; Bias2 Augmented T-test                        None              Good (0.789)</span></span>
-<span><span class="co">#&gt; Bias3 SlopeAndDrift (Ols L on P) - Mean       None              Good (0.121)</span></span>
-<span><span class="co">#&gt; Bias3 SlopeAndDrift (Ols L on P) - Reg.       None         Uncertain (0.045)</span></span>
-<span><span class="co">#&gt; Efficiency1 (Ols R on P) - Mean            Delta 1              Good (1.000)</span></span>
-<span><span class="co">#&gt; Efficiency1 (Ols R on P) - Reg.            Delta 1            Severe (0.000)</span></span>
+<span><span class="co">#&gt; Bias3 SlopeAndDrift (Ols L on P) - Mean       None              Good (0.797)</span></span>
+<span><span class="co">#&gt; Bias3 SlopeAndDrift (Ols L on P) - Reg.       None              Good (0.742)</span></span>
+<span><span class="co">#&gt; Efficiency1 (Ols R on P) - Mean            Delta 1              Good (0.949)</span></span>
+<span><span class="co">#&gt; Efficiency1 (Ols R on P) - Reg.            Delta 1         Uncertain (0.018)</span></span>
 <span><span class="co">#&gt; Efficiency2 (Ols Rv on Rv_1) - Mean           None                          </span></span>
 <span><span class="co">#&gt; Efficiency2 (Ols Rv on Rv_1) - Reg.           None                          </span></span>
 <span><span class="co">#&gt; Orthogonality1 (Ols Rv on Rv_(1:p)) - Mean    None                          </span></span>
@@ -513,16 +513,16 @@ can use the function <code class="sourceCode r">revision_analysis</code></p>
 <span><span class="co">#&gt; Orthogonality3 AutoCorrelation (Ljung-Box)    None         Uncertain (0.030)</span></span>
 <span><span class="co">#&gt; Orthogonality4 Seasonality (Ljung-Box)     Delta 1              Good (1.000)</span></span>
 <span><span class="co">#&gt; Orthogonality4 Seasonality (Friedman)      Delta 1              Good (0.475)</span></span>
-<span><span class="co">#&gt; SignalVsNoise1 - Noise (Ols R on P)        Delta 1            Severe (0.000)</span></span>
-<span><span class="co">#&gt; SignalVsNoise2 - Signal (Ols R on L)       Delta 1         Uncertain (0.999)</span></span>
+<span><span class="co">#&gt; SignalVsNoise1 - Noise (Ols R on P)        Delta 1               Bad (0.007)</span></span>
+<span><span class="co">#&gt; SignalVsNoise2 - Signal (Ols R on L)       Delta 1         Uncertain (0.069)</span></span>
 <span><span class="co">#&gt;                                            [Release[3]]-[Release[2]]</span></span>
-<span><span class="co">#&gt; Relevancy - Theil U2                                    Good (0.146)</span></span>
+<span><span class="co">#&gt; Relevancy - Theil U2                                    Good (0.162)</span></span>
 <span><span class="co">#&gt; Bias1 T-test                                            Good (0.711)</span></span>
 <span><span class="co">#&gt; Bias2 Augmented T-test                                  Good (0.710)</span></span>
-<span><span class="co">#&gt; Bias3 SlopeAndDrift (Ols L on P) - Mean                 Good (0.408)</span></span>
-<span><span class="co">#&gt; Bias3 SlopeAndDrift (Ols L on P) - Reg.                 Good (0.450)</span></span>
-<span><span class="co">#&gt; Efficiency1 (Ols R on P) - Mean                         Good (0.924)</span></span>
-<span><span class="co">#&gt; Efficiency1 (Ols R on P) - Reg.                         Good (0.725)</span></span>
+<span><span class="co">#&gt; Bias3 SlopeAndDrift (Ols L on P) - Mean                 Good (0.753)</span></span>
+<span><span class="co">#&gt; Bias3 SlopeAndDrift (Ols L on P) - Reg.                 Good (0.640)</span></span>
+<span><span class="co">#&gt; Efficiency1 (Ols R on P) - Mean                         Good (0.518)</span></span>
+<span><span class="co">#&gt; Efficiency1 (Ols R on P) - Reg.                         Good (0.098)</span></span>
 <span><span class="co">#&gt; Efficiency2 (Ols Rv on Rv_1) - Mean                     Good (0.774)</span></span>
 <span><span class="co">#&gt; Efficiency2 (Ols Rv on Rv_1) - Reg.                     Good (0.100)</span></span>
 <span><span class="co">#&gt; Orthogonality1 (Ols Rv on Rv_(1:p)) - Mean              Good (0.774)</span></span>
@@ -532,8 +532,8 @@ can use the function <code class="sourceCode r">revision_analysis</code></p>
 <span><span class="co">#&gt; Orthogonality3 AutoCorrelation (Ljung-Box)              Good (0.772)</span></span>
 <span><span class="co">#&gt; Orthogonality4 Seasonality (Ljung-Box)                  Good (1.000)</span></span>
 <span><span class="co">#&gt; Orthogonality4 Seasonality (Friedman)                   Good (0.226)</span></span>
-<span><span class="co">#&gt; SignalVsNoise1 - Noise (Ols R on P)                     Good (0.876)</span></span>
-<span><span class="co">#&gt; SignalVsNoise2 - Signal (Ols R on L)               Uncertain (0.102)</span></span></code></pre></div>
+<span><span class="co">#&gt; SignalVsNoise1 - Noise (Ols R on P)                     Good (0.074)</span></span>
+<span><span class="co">#&gt; SignalVsNoise2 - Signal (Ols R on L)               Uncertain (0.990)</span></span></code></pre></div>
 <p>To export the report in pdf or html format, you can use the function
 <code class="sourceCode r">render_report</code></p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
@@ -775,17 +775,18 @@ functions available in the package (and therefore finding the different
 functions corresponding to the individual tests), you can do</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/ls.html" class="external-link">ls</a></span><span class="op">(</span><span class="st">"package:rjd3revisions"</span><span class="op">)</span></span>
-<span><span class="co">#&gt;  [1] "bias"                      "check_horizontal"         </span></span>
-<span><span class="co">#&gt;  [3] "check_long"                "check_vertical"           </span></span>
-<span><span class="co">#&gt;  [5] "cointegration"             "create_vintages"          </span></span>
-<span><span class="co">#&gt;  [7] "create_vintages_from_csv"  "create_vintages_from_xlsx"</span></span>
-<span><span class="co">#&gt;  [9] "descriptive_statistics"    "efficiencyModel1"         </span></span>
-<span><span class="co">#&gt; [11] "efficiencyModel2"          "get_revisions"            </span></span>
-<span><span class="co">#&gt; [13] "orthogonallyModel1"        "orthogonallyModel2"       </span></span>
-<span><span class="co">#&gt; [15] "render_report"             "revision_analysis"        </span></span>
-<span><span class="co">#&gt; [17] "signalnoise"               "slope_and_drift"          </span></span>
-<span><span class="co">#&gt; [19] "theil"                     "theil2"                   </span></span>
-<span><span class="co">#&gt; [21] "unitroot"                  "vecm"</span></span></code></pre></div>
+<span><span class="co">#&gt;  [1] "bias"                      "check_date_year"          </span></span>
+<span><span class="co">#&gt;  [3] "check_horizontal"          "check_long"               </span></span>
+<span><span class="co">#&gt;  [5] "check_vertical"            "cointegration"            </span></span>
+<span><span class="co">#&gt;  [7] "create_vintages"           "create_vintages_from_csv" </span></span>
+<span><span class="co">#&gt;  [9] "create_vintages_from_xlsx" "descriptive_statistics"   </span></span>
+<span><span class="co">#&gt; [11] "efficiencyModel1"          "efficiencyModel2"         </span></span>
+<span><span class="co">#&gt; [13] "get_revisions"             "orthogonallyModel1"       </span></span>
+<span><span class="co">#&gt; [15] "orthogonallyModel2"        "render_report"            </span></span>
+<span><span class="co">#&gt; [17] "revision_analysis"         "signalnoise"              </span></span>
+<span><span class="co">#&gt; [19] "slope_and_drift"           "theil"                    </span></span>
+<span><span class="co">#&gt; [21] "theil2"                    "unitroot"                 </span></span>
+<span><span class="co">#&gt; [23] "vecm"</span></span></code></pre></div>
 <p>Use help(‘name of the functions’) or ?‘name of the functions’ for
 more information and examples over the various functions.</p>
 </div>
