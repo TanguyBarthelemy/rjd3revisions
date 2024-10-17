@@ -78,24 +78,24 @@ rather as data not (yet) available (the default).</p></dd>
 <span class="r-in"><span><span class="co">## Create vintage and test</span></span></span>
 <span class="r-in"><span><span class="va">vintages</span> <span class="op">&lt;-</span> <span class="fu"><a href="create_vintages.html">create_vintages</a></span><span class="op">(</span><span class="va">df_long</span>, periodicity <span class="op">=</span> <span class="fl">4L</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu">unitroot</span><span class="op">(</span><span class="va">vintages</span><span class="op">$</span><span class="va">diagonal_view</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>             DF.value  DF.stderr DF.statistic  DF.pvalue ADF.value ADF.stderr</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Release[1] 0.9903429 0.08410049   -0.1148279 0.61886461 1.0162483 0.09538409</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Release[2] 0.9873495 0.08684560   -0.1456662 0.60698796 1.0195376 0.10013583</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Release[3] 0.5052750 0.21913824   -2.2575934 0.02536690 0.3540470 0.28126498</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Release[4] 0.5518983 0.24835053   -1.8043115 0.06799979 0.4001970 0.30189641</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Release[5] 0.6903421 0.24386791   -1.2697770 0.18089663 0.6467313 0.30457133</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>             DF.value  DF.stderr DF.statistic DF.pvalue ADF.value ADF.stderr</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Release[1] 1.0307661 0.04040096    0.7615186 0.8730517 1.0333624 0.04454483</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Release[2] 1.0355066 0.03707786    0.9576233 0.9064197 1.0354817 0.04065255</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Release[3] 0.9291462 0.14032156   -0.5049386 0.4623933 0.9331619 0.16041000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Release[4] 0.8510102 0.14451907   -1.0309354 0.2565803 0.8527107 0.17115167</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Release[5] 0.9197216 0.26189536   -0.3065284 0.5443596 0.9101820 0.33572603</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>            ADF.statistic ADF.pvalue DFCT.value DFCT.stderr DFCT.statistic</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Release[1]     0.1703464 0.72048040  0.6080776   0.1521245      -2.576326</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Release[2]     0.1951106 0.72850354  0.6105483   0.1553618      -2.506741</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Release[3]    -2.2965994 0.02329433  0.1420367   0.2752276      -3.117287</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Release[4]    -1.9867840 0.04617639  0.1226609   0.3493649      -2.511240</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Release[5]    -1.1598883 0.21402516  0.1770964   0.4519305      -1.820863</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>            DFCT.pvalue  PP.value  PP.stderr PP.statistic  PP.pvalue</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Release[1]   0.3036970 0.9903429 0.08410049     1.341327 0.95173189</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Release[2]   0.3357236 0.9873495 0.08684560     1.462069 0.96152292</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Release[3]   0.1304699 0.5052750 0.21913824    -2.147060 0.03243329</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Release[4]   0.3375748 0.5518983 0.24835053    -1.628087 0.09660676</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Release[5]   0.6743518 0.6903421 0.24386791    -1.182328 0.20696405</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Release[1]     0.7489614  0.8705837  0.3398890   0.1698277      -3.886946</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Release[2]     0.8728050  0.8928740  0.3707726   0.1667649      -3.773141</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Release[3]    -0.4166705  0.4989676  0.1833421   0.2715848      -3.007009</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Release[4]    -0.8605778  0.3190087  0.1550576   0.3187226      -2.651027</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Release[5]    -0.2675335  0.5601091  0.2837778   0.4762991      -1.503724</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>            DFCT.pvalue  PP.value  PP.stderr PP.statistic PP.pvalue</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Release[1]  0.02480000 1.0307661 0.04040096    1.7398741 0.9776530</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Release[2]  0.03179319 1.0355066 0.03707786    2.1327734 0.9901343</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Release[3]  0.15760437 0.9291462 0.14032156   -0.2653207 0.5605882</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Release[4]  0.27745774 0.8510102 0.14451907   -0.9685752 0.2787108</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Release[5]  0.79813078 0.9197216 0.26189536   -0.5411883 0.4478557</span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
