@@ -79,7 +79,7 @@ rather as data not (yet) available (the default).</p></dd>
 <span class="r-in"><span><span class="co">## Create vintage and test</span></span></span>
 <span class="r-in"><span><span class="va">vintages</span> <span class="op">&lt;-</span> <span class="fu"><a href="create_vintages.html">create_vintages</a></span><span class="op">(</span><span class="va">df_long</span>, periodicity <span class="op">=</span> <span class="fl">4L</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="va">revisions</span> <span class="op">&lt;-</span> <span class="fu"><a href="get_revisions.html">get_revisions</a></span><span class="op">(</span><span class="va">vintages</span>, gap <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="fu">orthogonallyModel2</span><span class="op">(</span><span class="va">revisions</span><span class="op">$</span><span class="va">diagonal_view</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">orthogonallyModel2</span><span class="op">(</span><span class="va">revisions</span><span class="op">[[</span><span class="st">"diagonal_view"</span><span class="op">]</span><span class="op">]</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                            N          R2          F intercept.estimate</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [Release[3]]-[Release[2]] 22 0.077572806 1.68192799        -0.13897991</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [Release[4]]-[Release[3]] 11 0.455470977 7.52804463        -0.05148318</span>
