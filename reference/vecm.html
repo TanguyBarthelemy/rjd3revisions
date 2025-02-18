@@ -86,17 +86,17 @@ rather as data not (yet) available (the default).</p></dd>
 <span class="r-in"><span><span class="co">## Create vintage and test</span></span></span>
 <span class="r-in"><span><span class="va">vintages</span> <span class="op">&lt;-</span> <span class="fu"><a href="create_vintages.html">create_vintages</a></span><span class="op">(</span><span class="va">df_long</span>, periodicity <span class="op">=</span> <span class="fl">4L</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu">vecm</span><span class="op">(</span><span class="va">vintages</span><span class="op">[[</span><span class="st">"diagonal_view"</span><span class="op">]</span><span class="op">]</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                            trace(2)  trace(1)    max(2)    max(1)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [Release[1]]_[Release[2]] 0.1446287  7.003346 0.1446287  6.858717</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [Release[1]]_[Release[3]] 0.1649499  9.088006 0.1649499  8.923056</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [Release[1]]_[Release[4]] 0.2157673  9.288481 0.2157673  9.072713</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [Release[1]]_[Release[5]] 3.2509452  9.903474 3.2509452  6.652529</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [Release[2]]_[Release[3]] 0.3319324 22.542124 0.3319324 22.210191</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [Release[2]]_[Release[4]] 0.7926052 10.840611 0.7926052 10.048005</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [Release[2]]_[Release[5]] 2.1655648 13.484001 2.1655648 11.318436</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [Release[3]]_[Release[4]] 0.2051223 14.009325 0.2051223 13.804202</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [Release[3]]_[Release[5]] 2.2021166  7.913960 2.2021166  5.711844</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [Release[4]]_[Release[5]] 1.7844206 15.715506 1.7844206 13.931085</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                             trace(2)  trace(1)     max(2)    max(1)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [Release[1]]_[Release[2]] 0.01067939  7.281218 0.01067939  7.270539</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [Release[1]]_[Release[3]] 0.01232514  9.709111 0.01232514  9.696786</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [Release[1]]_[Release[4]] 0.60022102  7.328674 0.60022102  6.728453</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [Release[1]]_[Release[5]] 0.17550803  5.865721 0.17550803  5.690213</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [Release[2]]_[Release[3]] 0.05191341 12.787195 0.05191341 12.735281</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [Release[2]]_[Release[4]] 0.43388250  4.586723 0.43388250  4.152840</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [Release[2]]_[Release[5]] 0.40604721  9.458998 0.40604721  9.052951</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [Release[3]]_[Release[4]] 0.37781090 12.037867 0.37781090 11.660056</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [Release[3]]_[Release[5]] 0.18065343  6.312843 0.18065343  6.132190</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [Release[4]]_[Release[5]] 0.54119802 16.838187 0.54119802 16.296989</span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
