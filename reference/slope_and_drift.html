@@ -81,31 +81,8 @@ rather as data not (yet) available (the default).</p></dd>
 <span class="r-in"><span><span class="co">## Create vintage and test</span></span></span>
 <span class="r-in"><span><span class="va">vintages</span> <span class="op">&lt;-</span> <span class="fu"><a href="create_vintages.html">create_vintages</a></span><span class="op">(</span><span class="va">df_long</span>, periodicity <span class="op">=</span> <span class="fl">4L</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu">slope_and_drift</span><span class="op">(</span><span class="va">vintages</span><span class="op">[[</span><span class="st">"diagonal_view"</span><span class="op">]</span><span class="op">]</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>             N        R2        F intercept.estimate intercept.stderr</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Release[2] 29 0.9640344  723.718          0.3924057        0.4250440</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Release[3] 26 0.9899999 2375.982         -0.3992916        0.2441183</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Release[4] 17 0.9888331 1328.253          0.7652153        0.3483762</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Release[5] 14 0.9936468 1876.801         -0.2453058        0.3378674</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>            intercept.pvalue slope.estimate slope.stderr slope.pvalue</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Release[2]       0.36407400      0.9829721   0.03653899   0.64493837</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Release[3]       0.11496237      1.0073033   0.02066515   0.72686637</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Release[4]       0.04418801      0.9434990   0.02588815   0.04538415</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Release[5]       0.48173478      1.0159378   0.02345082   0.50963784</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>               skewness   kurtosis JarqueBera.value JarqueBera.pvalue</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Release[2] -0.44989446  0.9998122        2.1107852         0.3480557</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Release[3] -0.72616032 -0.3552829        2.3286054         0.3121402</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Release[4]  0.02034036 -1.3438358        1.2050330         0.5474323</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Release[5] -0.43189364 -0.1098506        0.4106893         0.8143666</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>            BreuschPagan.R2 BreuschPagan.value BreuschPagan.pvalue   White.R2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Release[2]     0.017672389         0.48573867           0.4917920 0.05235191</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Release[3]     0.015663978         0.38191783           0.5423992 0.08451522</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Release[4]     0.001314213         0.01973913           0.8901374 0.02692496</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Release[5]     0.020526302         0.25147753           0.6251096 0.06374769</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>            White.value White.pvalue    arch.R2 arch.value arch.pvalue</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Release[2]   1.5182054    0.4680863 0.05799203  1.6237767   0.2025660</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Release[3]   2.1973958    0.3333048 0.03477148  0.8692870   0.3511528</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Release[4]   0.4577244    0.7954382 0.01208739  0.1933983   0.6601032</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Release[5]   0.8924677    0.6400341 0.03421708  0.4448220   0.5048042</span>
+<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>Slope and drift could not be performed</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> NULL</span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
