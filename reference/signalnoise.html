@@ -89,16 +89,16 @@ rather as data not (yet) available (the default).</p></dd>
 <span class="r-in"><span><span class="co">## Create vintage and test</span></span></span>
 <span class="r-in"><span><span class="va">vintages</span> <span class="op">&lt;-</span> <span class="fu"><a href="create_vintages.html">create_vintages</a></span><span class="op">(</span><span class="va">df_long</span>, periodicity <span class="op">=</span> <span class="fl">4L</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu">signalnoise</span><span class="op">(</span><span class="va">vintages</span><span class="op">[[</span><span class="st">"diagonal_view"</span><span class="op">]</span><span class="op">]</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                              News.R2    News.F News.pvalue    Noise.R2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [Release[2]]-[Release[1]] 0.01952634 0.6248429   0.5421682 0.002009833</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [Release[3]]-[Release[2]] 0.03125519 0.6876142   0.5142713 0.054619515</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [Release[4]]-[Release[3]] 0.05215226 0.5215226   0.6124930 0.113613559</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [Release[5]]-[Release[4]] 1.00000000 2.0000000         NaN 1.000000000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                                News.R2       News.F News.pvalue    Noise.R2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [Release[2]]-[Release[1]] 2.092282e-03 0.0669530179   0.9353785 0.002278357</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [Release[3]]-[Release[2]] 2.406276e-04 0.0060156911   0.9940039 0.006630292</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [Release[4]]-[Release[3]] 8.888437e-06 0.0001244381   0.9998756 0.010529377</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [Release[5]]-[Release[4]] 9.803707e-02 0.3921482835   0.7183143 0.078961499</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                              Noise.F Noise.pvalue</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [Release[2]]-[Release[1]] 0.06431466    0.9378388</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [Release[3]]-[Release[2]] 1.20162933    0.3215052</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [Release[4]]-[Release[3]] 1.13613559    0.3678697</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [Release[5]]-[Release[4]] 2.00000000          NaN</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [Release[2]]-[Release[1]] 0.07290742    0.9298511</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [Release[3]]-[Release[2]] 0.16575729    0.8482549</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [Release[4]]-[Release[3]] 0.14741128    0.8644779</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [Release[5]]-[Release[4]] 0.31584599    0.7599674</span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
