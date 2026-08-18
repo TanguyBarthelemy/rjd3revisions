@@ -2,7 +2,7 @@
 
 ## Authors
 
-- **Corentin Lemasson**. Author, maintainer.
+- **Corentin Lemasson**. Author, maintainer, copyright holder.
 
 - **Tanguy Barthelemy**. Author, artist.
 
