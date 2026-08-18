@@ -14,9 +14,9 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 #### Added
 
-- a param `seed` in the function
+- a new argument `seed` in the function
   [`simulate_long()`](https://rjdverse.github.io/rjd3revisions/reference/simulate_long.md)
-  to add reproductibility to this function
+  to add reproducibility to this function
 
 #### Changed
 

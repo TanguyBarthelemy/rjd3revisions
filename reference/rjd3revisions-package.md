@@ -1,4 +1,4 @@
-# rjd3revisions: Revision analysis with 'JDemetra+ 3.x'
+# rjd3revisions: Revision Analysis with 'JDemetra+ 3.x'
 
 Revision analysis tool part of 'JDemetra+ 3.x'
 (<https://github.com/jdemetra>) time series analysis software. It
@@ -18,10 +18,11 @@ Useful links:
 
 ## Author
 
-**Maintainer**: Corentin Lemasson <corentin.lemasson@nbb.be>
+**Maintainer**: Corentin Lemasson <corentin.lemasson@nbb.be> \[copyright
+holder\]
 
 Authors:
 
-- Corentin Lemasson <corentin.lemasson@nbb.be>
+- Corentin Lemasson <corentin.lemasson@nbb.be> \[copyright holder\]
 
 - Tanguy Barthelemy <tanguy.barthelemy@insee.fr> \[artist\]

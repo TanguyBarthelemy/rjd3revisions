@@ -23,7 +23,7 @@ print(x, n_row = 8, n_col = 3, ...)
 - n_col:
 
   number of columns to display. Can be either the last n columns
-  (verical view), the last n rows (horizontal view) or the first n
+  (vertical view), the last n rows (horizontal view) or the first n
   columns (diagonal view). This argument is not used for the long view.
 
 - ...:

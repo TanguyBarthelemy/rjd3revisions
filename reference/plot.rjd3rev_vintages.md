@@ -17,7 +17,7 @@ plot(x, col, ...)
 
 - col:
 
-  a color vector of the same length as the number of releases
+  a colour vector of the same length as the number of releases
 
 - ...:
 

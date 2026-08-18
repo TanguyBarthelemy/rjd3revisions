@@ -39,23 +39,23 @@ Finally, you will find out all the reference papers in the last section.
 
 This package relies on the Java libraries of [JDemetra+
 v3](https://github.com/jdemetra/jdplus-main) and on the package
-[rjd3toolkit](https://github.com/rjdverse/rjd3toolkit) of
+[{rjd3toolkit}](https://github.com/rjdverse/rjd3toolkit) of
 [rjdverse](https://github.com/rjdverse?view_as=public). Prior the
 installation, you must ensure to have a Java version \>= 17.0 on your
 computer. If you need to use a portable version of Java to fill this
 request, you can follow the instructions in the [installation
 manual](https://github.com/rjdverse/rjdemetra/wiki/Installation-manual)
-of RJDemetra.
+of {RJDemetra}.
 
 In addition to a Java version \>= 17.0, you must have a recent version
-of the R packages rJava (\>= 1.0.6) and RProtobuf (\>=0.4.17) that you
-can download from CRAN. Depending on your current version of R, you
-might also need to install another version of Rtools. (\>= 3.6).
+of the R packages {rJava} (\>= 1.0.6) and {RProtoBuf} (\>=0.4.17) that
+you can download from CRAN. Depending on your current version of R, you
+might also need to install another version of rtools. (\>= 3.6).
 
 This package also depends on the package
-[rjd3toolkit](https://github.com/rjdverse/rjd3toolkit) that you must
+[{rjd3toolkit}](https://github.com/rjdverse/rjd3toolkit) that you must
 install from GitHub prior to
-[rjd3revsions](https://github.com/rjdverse/rjd3revisions).
+[{rjd3revisions}](https://github.com/rjdverse/rjd3revisions).
 
 ``` r
 
@@ -67,10 +67,10 @@ Note that depending on the R packages that are already installed on your
 computer, you might also be asked to install or re-install a few other
 packages from CRAN.
 
-Finally, this package also suggests the R packages `formattable` and
-`kableExtra` (and `readxl` if you import your input data from Excel)
+Finally, this package also suggests the R packages {formattable} and
+{kableExtra} (and `readxl` if you import your input data from Excel)
 downloadable from CRAN. You are invited to install them for an enhanced
-formatting of the output (i.e., meaningful colors).
+formatting of the output (i.e., meaningful colours).
 
 ## Usage
 
@@ -325,11 +325,10 @@ sources of inefficiency in preliminary estimates. We would conclude to
 inefficiency in the preliminary estimates when revisions are predictable
 in some way. Parametric tests are divided into 5 categories: relevancy
 (check whether preliminary estimates are even worth it), bias,
-efficiency, orthogonality (correlation at higher lags), and
-signalVSnoise. This function is robust. If for some reasons, a test
-fails to process, it is just skipped and a warning is sent to users with
-the possible cause of failure. The other tests are then performed as
-usual.
+efficiency, orthogonality (correlation at higher lags), and signal
+vs. noise. This function is robust. If for some reasons, a test fails to
+process, it is just skipped and a warning is sent to users with the
+possible cause of failure. The other tests are then performed as usual.
 
 For some of the parametric tests, prior transformation of the vintage
 data may be important to avoid misleading results. By default, the
@@ -339,7 +338,7 @@ on the augmented Dickey-Fuller (ADF) test to test the presence of unit
 root and, for cointegration, we proceed to an ADF test on the residuals
 of an OLS regression between the two vintages. The results of those
 tests are also made available in the output of the function (section
-‘varbased’). By contrast, the choice of log-transformation is left to
+‘var-based’). By contrast, the choice of log-transformation is left to
 the discretion of the users based on their knowledge of the series and
 the diagnostics of the various tests. By default, no log-transformation
 is considered.
@@ -479,9 +478,9 @@ their description and their default value.
 | signal_noise1_threshold | Threshold values for Signal vs Noise test (test 1) | c(severe = 0.001, bad = 0.01, uncertain = 0.05) |
 | signal_noise2_threshold | Threshold values for Signal vs Noise test (test 2) | c(uncertain = 0.05) |
 | jb_res_threshold | Normality test: Jarque-Bera | c(bad = 0.01, uncertain = 0.1) |
-| bp_res_threshold | Homoskedasticity test: Breusch-Pagan | c(bad = 0.01, uncertain = 0.1) |
-| white_res_threshold | Homoskedasticity test: Whitet | c(bad = 0.01, uncertain = 0.1) |
-| arch_res_threshold | Homoskedasticity test: ARCH | c(bad = 0.01, uncertain = 0.1) |
+| bp_res_threshold | Homoscedasticity test: Breusch-Pagan | c(bad = 0.01, uncertain = 0.1) |
+| white_res_threshold | Homoscedasticity test: Whitet | c(bad = 0.01, uncertain = 0.1) |
+| arch_res_threshold | Homoscedasticity test: ARCH | c(bad = 0.01, uncertain = 0.1) |
 
 Finally, the functions
 [`set_thresholds_to_default()`](https://rjdverse.github.io/rjd3revisions/reference/set_thresholds_to_default.md)
@@ -615,7 +614,7 @@ efficiently at the time of the preliminary estimate, revisions should
 not be predictable and therefore neither be correlated with preliminary
 estimates or display any relationship from one vintage to another. This
 section focuses on these two points. Predictability of revisions is
-tested even further in the Orthogonality and SignalVSNoise sections.
+tested even further in the Orthogonality and signal vs. noise sections.
 
 #### Regression of revisions on previous estimates
 
@@ -655,7 +654,7 @@ and seasonality tests for a given set of revisions. If there is
 significant correlation in the revisions for subsequent periods, this
 may witness some degree of predictability in the revision process.
 
-#### Regression of latter revisions (Rv) on previous revisions (Rv_1, Rv_2,…Rv_p)
+#### Regression of latter revisions ($`Rv`$) on previous revisions ($`Rv_1`$, $`Rv_2`$,…$`Rv_p`$)
 
 We assume a linear regression model of the revisions from latter
 vintages ($`R_v`$) on the revisions from p previous vintages
@@ -672,7 +671,7 @@ hypothesis $`\beta_0 = 0`$ and a F-test to check the null hypothesis
 that $`\beta_1 = \beta_2=...=\beta_p=0`$. Diagnostics on the residuals
 should be verified
 
-#### Regression of latter revisions (Rv) on revisions from a specific vintage (Rv_k)
+#### Regression of latter revisions ($`Rv`$) on revisions from a specific vintage ($`Rv_k`$)
 
 We assume a linear regression model of the revisions from latter
 vintages ($`R_v`$) on the revisions from a specific vintage

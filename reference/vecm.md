@@ -1,6 +1,6 @@
 # Vector error correction model (VECM)
 
-Can lead to a better understanding of the nature of any nonstationary
+Can lead to a better understanding of the nature of any non-stationary
 process among the different component series.
 
 ## Usage

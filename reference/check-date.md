@@ -32,10 +32,11 @@ a boolean
 
 ## Details
 
-The function `check_date_year` checks if the pattern AAAA is recognised.
-If so, the date will be assimilated with the first January of each year
-AAAA. The function `check_date_quarter` checks if the quarterly formats.
-The accepted formats (for example for the third quarter of 2000) are:
+The function `check_date_year` checks if the pattern `AAAA` is
+recognised. If so, the date will be assimilated with the first January
+of each year `AAAA`. The function `check_date_quarter` checks if the
+quarterly formats. The accepted formats (for example for the third
+quarter of 2000) are:
 
 - 2000 T3
 
